@@ -1,0 +1,92 @@
+body {
+  padding: 25px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
+  counter-reset: section;
+}
+
+a {
+  color: #00b7ff;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  border: solid 1px;
+  padding: 0rem 2px;
+  border-radius: 5px;
+  border-color: #d8d8d8;
+  font-size: 1rem;
+  margin: 0.5rem 0rem;
+  color: #616161;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  position: relative;
+  padding: 5px;
+}
+
+li::before {
+  counter-increment: section;
+  content: counter(section);
+  background-color: #57a3bb;
+  border-radius: 10%;
+  margin-right: 5px;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 5px;
+  color: white;
+  z-index: 10;
+}
+
+li .bar {
+  background: #9ac8d787;
+  display: block;
+  height: 100%;
+  position: absolute;
+  content: " ";
+  z-index: 0;
+  right: 0px;
+  left: 0px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+li .bar-text {
+  color: #5d8390;
+  font-size: 12px;
+  position: relative;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  /* text-align: center; */
+  align-items: center;
+  z-index: 10;
+  /* justify-content: center; */
+}
+
+.first-row {
+  color: #0e5e76;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.li-icon::before {
+  display: inline-block;
+  content: attr(flag);
+  margin-right: 5px;
+  font-size: 1.5rem;
+}
